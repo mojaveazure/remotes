@@ -61,9 +61,7 @@ install_version <- function(package, version = NULL,
     stop("install_version() must be called with a single 'package' argument - multiple packages given")
   }
 
-  if (!identical(type, "source")) {
-    stop("`type` must be 'source' for `install_version()`", call. = FALSE)
-  }
+  type <- match.arg(type, c("source", "both"))
 
   url <- download_version_url(package, version, repos, type)
   res <- install_url(url,
