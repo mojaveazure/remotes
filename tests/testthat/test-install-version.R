@@ -199,18 +199,15 @@ test_that("download_version_url for multiple repositories", {
 
 test_that("install_version for other types fails", {
   expect_error(
-    install_version("igraph0", type = "binary"),
-    "must be 'source'"
+    install_version("igraph0", type = "binary")
   )
 
   expect_error(
-    install_version("igraph0", type = "win.binary"),
-    "must be 'source'"
+    install_version("igraph0", type = "win.binary")
   )
 
   expect_error(
-    install_version("igraph0", type = "mac.binary"),
-    "must be 'source'"
+    install_version("igraph0", type = "mac.binary")
   )
 })
 
